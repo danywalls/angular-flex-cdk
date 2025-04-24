@@ -1,0 +1,47 @@
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden; /* Clearfix alternative */
+}
+
+.sidebar {
+  float: left;
+  width: 20%;
+  background-color: #f0f0f0;
+  padding: 20px;
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+
+.main-content {
+  float: left;
+  width: 80%;
+  padding: 20px;
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+
+/* Basic styling for sidebar elements */
+.sidebar h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #555;
+}
+
+.sidebar a:hover {
+  color: #000;
+}
