@@ -1,20 +1,16 @@
-// All styling has been moved to Kendo UI utility classes in the HTML
-// Only keeping the class names for component structure
 
 .container {
-  // All styling moved to k-d-flex, k-flex-wrap, k-mx-auto, k-max-w-1200 classes
-  display: flex; // Explicit flex display to ensure side-by-side layout
+
+  display: flex;
 }
 
 .sidebar {
-  // All styling moved to k-w-20, k-bg-neutral-100, k-p-5, k-min-h-100 classes
-  // Keeping width property as fallback in case k-w-20 doesn't work properly
+
   width: 20%;
 }
 
 .main-content {
-  // All styling moved to k-w-80, k-p-5, k-min-h-100 classes
-  // Keeping width property as fallback in case k-w-80 doesn't work properly
+
   width: 80%;
 
   &.k-w-100 {
