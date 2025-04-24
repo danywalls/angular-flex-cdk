@@ -1,18 +1,24 @@
-<div class="container">
+<div class="container k-d-flex k-flex-wrap k-mx-auto k-max-w-1200">
   <!-- Sidebar is conditionally shown based on isMobile signal -->
   @if (!isMobile()) {
-    <div class="sidebar">
-      <h2>Sidebar</h2>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contact</a></li>
+    <div class="sidebar k-w-20 k-bg-success-100 k-p-5 k-min-h-100 k-shadow-md k-border-end k-border-success-300">
+      <h2 class="k-mt-0 k-mb-4 k-text-success-800 k-font-weight-bold k-font-size-xxl k-font-family-monospace">Dashboard</h2>
+      <ul class="k-reset">
+        <li class="k-mb-3"><a href="#" class="k-text-success-600 k-text-decoration-none k-hover-text-success-900 k-d-block k-py-2 k-px-3 k-rounded-lg k-hover-bg-success-200 k-font-weight-medium k-font-size-md k-transition-all">Home</a></li>
+        <li class="k-mb-3"><a href="#" class="k-text-success-600 k-text-decoration-none k-hover-text-success-900 k-d-block k-py-2 k-px-3 k-rounded-lg k-hover-bg-success-200 k-font-weight-medium k-font-size-md k-transition-all">About</a></li>
+        <li class="k-mb-3"><a href="#" class="k-text-success-600 k-text-decoration-none k-hover-text-success-900 k-d-block k-py-2 k-px-3 k-rounded-lg k-hover-bg-success-200 k-font-weight-medium k-font-size-md k-transition-all">Services</a></li>
+        <li class="k-mb-3"><a href="#" class="k-text-success-600 k-text-decoration-none k-hover-text-success-900 k-d-block k-py-2 k-px-3 k-rounded-lg k-hover-bg-success-200 k-font-weight-medium k-font-size-md k-transition-all">Contact</a></li>
       </ul>
     </div>
   }
-  <div class="main-content" [class.full-width]="isMobile()">
-    <h1>Main Content Area</h1>
-    <p>This is the main content area of the page. The sidebar and main content are now aligned using flexbox for a responsive layout. The sidebar will be hidden on mobile devices using Angular CDK's BreakpointObserver.</p>
+  <div class="main-content k-w-80 k-p-5 k-min-h-100 k-bg-secondary-50" [class.k-w-100]="isMobile()">
+    <h1 class="k-mb-5 k-text-secondary-800 k-font-weight-bold k-pb-3 k-border-bottom k-border-secondary-300 k-font-size-xxxl k-font-family-sans-serif">Welcome to Our Platform</h1>
+    <div class="k-card k-mb-5 k-p-5 k-bg-white k-shadow-lg k-rounded-xl">
+      <h3 class="k-mb-3 k-text-secondary-700 k-font-weight-medium k-font-size-lg k-font-family-sans-serif">Modern UI Design</h3>
+      <p class="k-mb-4 k-text-secondary-600 k-line-height-lg k-font-size-md">This is the main content area of the page. The sidebar and main content are now aligned using Kendo UI flex utilities for a responsive layout. The sidebar will be hidden on mobile devices using Angular CDK's BreakpointObserver.</p>
+      <div class="k-d-flex k-justify-content-end">
+        <button class="k-button k-button-lg k-button-secondary k-rounded-lg k-font-weight-bold k-text-uppercase k-px-4">Explore Now</button>
+      </div>
+    </div>
   </div>
 </div>
