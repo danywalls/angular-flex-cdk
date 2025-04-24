@@ -1,28 +1,16 @@
-<header>
-  <h1>Top Movies 2023</h1>
-</header>
 <div class="container">
-  <aside>
+  <div class="sidebar">
+    <h2>Sidebar</h2>
     <ul>
-      <li>Home</li>
-      <li>About</li>
-      <li>Contact</li>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
     </ul>
-  </aside>
-  <main>
-
-    <section class="movies-section">
-      <h2>Top Movies 2023</h2>
-      @for (movie of topMovies2023; track movie) {
-        <div class="movie-card">
-          <h3>{{ movie.title }}</h3>
-          <p>Director: {{ movie.director }}</p>
-          <p>Box Office: {{ movie.boxOffice }}</p>
-        </div>
-      }
-    </section>
-  </main>
+  </div>
+  <div class="main-content">
+    <h1>Main Content Area</h1>
+    <p>This is the main content area of the page. The sidebar and main content are aligned without using flex or
+      grid.</p>
+  </div>
 </div>
-<footer>
-  <p>Build with love and Kendo UI</p>
-</footer>
