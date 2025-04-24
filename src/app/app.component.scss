@@ -19,15 +19,9 @@
   padding: 20px;
   box-sizing: border-box;
   min-height: 100vh;
-}
 
-/* Media query for mobile devices */
-@media (max-width: 768px) {
-  .sidebar {
-    display: none;
-  }
-
-  .main-content {
+  // Class applied when in mobile view
+  &.full-width {
     width: 100%;
   }
 }

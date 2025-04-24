@@ -1,15 +1,18 @@
 <div class="container">
-  <div class="sidebar">
-    <h2>Sidebar</h2>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </div>
-  <div class="main-content">
+  <!-- Sidebar is conditionally shown based on isMobile signal -->
+  @if (!isMobile()) {
+    <div class="sidebar">
+      <h2>Sidebar</h2>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  }
+  <div class="main-content" [class.full-width]="isMobile()">
     <h1>Main Content Area</h1>
-    <p>This is the main content area of the page. The sidebar and main content are now aligned using flexbox for a responsive layout. The sidebar will be hidden on mobile devices.</p>
+    <p>This is the main content area of the page. The sidebar and main content are now aligned using flexbox for a responsive layout. The sidebar will be hidden on mobile devices using Angular CDK's BreakpointObserver.</p>
   </div>
 </div>
