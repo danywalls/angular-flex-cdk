@@ -2,11 +2,11 @@
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  overflow: hidden; /* Clearfix alternative */
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .sidebar {
-  float: left;
   width: 20%;
   background-color: #f0f0f0;
   padding: 20px;
@@ -15,14 +15,24 @@
 }
 
 .main-content {
-  float: left;
   width: 80%;
   padding: 20px;
   box-sizing: border-box;
   min-height: 100vh;
 }
 
-/* Basic styling for sidebar elements */
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+
+  .main-content {
+    width: 100%;
+  }
+}
+
+
 .sidebar h2 {
   margin-top: 0;
   color: #333;
