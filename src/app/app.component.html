@@ -1,24 +1,28 @@
 <header>
-  <h1>NBA Results</h1>
+  <h1>Top Movies 2023</h1>
 </header>
-<main>
+<div class="container">
+  <aside>
+    <ul>
+      <li>Home</li>
+      <li>About</li>
+      <li>Contact</li>
+    </ul>
+  </aside>
+  <main>
 
-  @for(game of nbaGames; track game.date){
-    <div class="game">
-      <h2>{{ game.date | date: 'fullDate' }}</h2>
-      <div class="teams">
-        <div class="team">
-          <h3>{{ game.homeTeam }}</h3>
-          <p>Score: {{ game.homeScore }}</p>
+    <section class="movies-section">
+      <h2>Top Movies 2023</h2>
+      @for (movie of topMovies2023; track movie) {
+        <div class="movie-card">
+          <h3>{{ movie.title }}</h3>
+          <p>Director: {{ movie.director }}</p>
+          <p>Box Office: {{ movie.boxOffice }}</p>
         </div>
-        <div class="team">
-          <h3>{{ game.awayTeam }}</h3>
-          <p>Score: {{ game.awayScore }}</p>
-        </div>
-      </div>
-    </div>
-  }
-</main>
+      }
+    </section>
+  </main>
+</div>
 <footer>
   <p>Build with love and Kendo UI</p>
 </footer>
